@@ -16,11 +16,32 @@
     return self;
 }
 
--(Footman *)trainFootman
+- (Footman *)trainFootman
 {
-    Footman *footman = [[Footman alloc] init];
-    self.gold -= 135;
-    self.food -= 2;
-    return footman;
+    if ([self canTrainFootman])
+    {
+        Footman *footman = [[Footman alloc] init];
+        self.gold -= 135;
+        self.food -= 2;
+        return footman;
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+- (BOOL)canTrainFootman
+{
+    BOOL canTrain = true;
+    if (self.food >= 2 && self.gold >=135)
+    {
+        canTrain = YES;
+    }
+    else
+    {
+        canTrain = NO;
+    }
+    return canTrain;
 }
 @end
