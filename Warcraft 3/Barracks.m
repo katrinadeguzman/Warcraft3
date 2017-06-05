@@ -30,11 +30,38 @@
         return nil;
     }
 }
-
+- (Peasant*)trainPeasant
+{
+    if ([self canTrainPeasant])
+    {
+        Peasant *peasant = [[Peasant alloc] init];
+        self.gold -= 90;
+        self.food -= 5;
+        return peasant;
+    }
+    else
+    {
+        return nil;
+    }
+}
 - (BOOL)canTrainFootman
 {
     BOOL canTrain = YES;
     if (self.food >= 2 && self.gold >=135)
+    {
+        canTrain = YES;
+    }
+    else
+    {
+        canTrain = NO;
+    }
+    return canTrain;
+}
+
+- (BOOL)canTrainPeasant
+{
+    BOOL canTrain = YES;
+    if (self.food >= 5 && self.gold >=90)
     {
         canTrain = YES;
     }
