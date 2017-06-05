@@ -33,7 +33,7 @@
 
 - (BOOL)canTrainFootman
 {
-    BOOL canTrain = true;
+    BOOL canTrain = YES;
     if (self.food >= 2 && self.gold >=135)
     {
         canTrain = YES;
