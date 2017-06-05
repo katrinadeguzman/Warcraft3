@@ -10,4 +10,11 @@
 
 @implementation Peasant
 
+- (instancetype)init
+{
+    self.healthPoints = 35;
+    
+    return self;
+}
+
 @end
