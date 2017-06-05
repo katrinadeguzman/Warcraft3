@@ -12,7 +12,6 @@
 
 - (instancetype)initWithHP:(int)hp AP:(int)ap
 {
-    self = [super init];
     self.healthPoints = hp;
     self.attackPower = ap;
     

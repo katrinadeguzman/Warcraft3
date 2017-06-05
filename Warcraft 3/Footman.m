@@ -7,12 +7,12 @@
 //
 
 #import "Footman.h"
-
+#import "Unit.h"
 @implementation Footman
 
--(instancetype)init{
-    _healthPoints = 60;
-    _attackPower = 10;
+-(id)init{
+    self.healthPoints = 60;
+    self.attackPower = 10;
     return self;
 }
 
