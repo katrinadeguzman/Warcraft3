@@ -16,4 +16,11 @@
     return self;
 }
 
+-(Footman *)trainFootman
+{
+    Footman *footman = [[Footman alloc] init];
+    self.gold -= 135;
+    self.food -= 2;
+    return footman;
+}
 @end
